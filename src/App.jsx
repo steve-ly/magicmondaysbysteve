@@ -13,7 +13,7 @@ const App = () => {
   const [passwordInput, setPasswordInput] = useState("");
 
   const correctPassword = "UNSW";
-  const enablePasswordProtection = false; // Set to false to disable password protection
+  const enablePasswordProtection = true; // Set to false to disable password protection
 
   const handleLogin = (e) => {
     e.preventDefault();
