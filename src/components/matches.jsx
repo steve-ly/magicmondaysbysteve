@@ -9,7 +9,7 @@ const Matches = () => {
 
     useEffect(() => {
       // Fetch the leaderboard data
-      fetch('/public/leaderboard.json')
+      fetch(`${process.env.PUBLIC_URL}/leaderboard.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
