@@ -9,7 +9,7 @@ const Matches = () => {
 
     useEffect(() => {
       // Fetch the leaderboard data
-      fetch('/leaderboard.json')
+      fetch(`${import.meta.env.BASE_URL}leaderboard.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -22,7 +22,7 @@ const Matches = () => {
 
     useEffect(() => {
       // Fetch the matches data
-      fetch('/matches.json')
+      fetch(`${import.meta.env.BASE_URL}matches.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');

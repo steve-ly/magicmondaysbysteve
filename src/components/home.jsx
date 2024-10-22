@@ -6,7 +6,7 @@ const Home = () => {
 
     useEffect(() => {
       // Fetch the leaderboard data
-      fetch('/notices.json')
+      fetch(`${import.meta.env.BASE_URL}notices.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -19,7 +19,7 @@ const Home = () => {
 
     useEffect(() => {
         // Fetch the leaderboard data
-        fetch('/news.json')
+        fetch(`${import.meta.env.BASE_URL}news.json`)
           .then((response) => {
             if (!response.ok) {
               throw new Error('Network response was not ok');

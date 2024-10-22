@@ -9,7 +9,7 @@ const DescBox = () => {
 
     useEffect(() => {
         // Fetch the JSON data
-        fetch(`/${deckListName}.json`)
+        fetch(`${import.meta.env.BASE_URL}${deckListName}.json`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -22,7 +22,7 @@ const DescBox = () => {
 
     useEffect(() => {
         // Fetch the glossary JSON data
-        fetch(`/glossary.json`)
+        fetch(`${import.meta.env.BASE_URL}glossary.json`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');

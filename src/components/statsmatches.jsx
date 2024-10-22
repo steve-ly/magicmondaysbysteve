@@ -6,7 +6,7 @@ const StatsAndMatches = ({ deckName }) => {
     
     useEffect(() => {
         // Fetch the JSON data for the specific deck
-        fetch(`/matches.json`) 
+        fetch(`${import.meta.env.BASE_URL}matches.json`) 
           .then((response) => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
